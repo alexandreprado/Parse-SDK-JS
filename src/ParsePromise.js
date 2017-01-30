@@ -109,7 +109,8 @@ export default class ParsePromise {
           try {
             results = [resolvedCallback.apply(this, results)];
           } catch (e) {
-            results = [ParsePromise.error(e)];
+              throw e;
+            // results = [ParsePromise.error(e)];
           }
         } else {
           results = [resolvedCallback.apply(this, results)];
@@ -133,7 +134,8 @@ export default class ParsePromise {
           try {
             result = [rejectedCallback(error)];
           } catch (e) {
-            result = [ParsePromise.error(e)];
+              throw e;
+            // result = [ParsePromise.error(e)];
           }
         } else {
           result = [rejectedCallback(error)];
