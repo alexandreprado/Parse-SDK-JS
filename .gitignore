@@ -1,9 +1,10 @@
 coverage
 dist
-lib
+#lib
 logs
 node_modules
 test_output
 *~
 .DS_Store
 .idea/
+npm-debug.log
