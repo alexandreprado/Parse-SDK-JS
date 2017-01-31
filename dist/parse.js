@@ -4380,7 +4380,8 @@ var ParseObject = function () {
     key: 'toPointer',
     value: function () {
       if (!this.id) {
-        throw new Error('Cannot create a pointer to an unsaved ParseObject');
+        console.log('sem id na classe', this.className);
+        // throw new Error('Cannot create a pointer to an unsaved ParseObject');
       }
       return {
         __type: 'Pointer',

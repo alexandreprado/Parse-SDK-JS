@@ -511,7 +511,8 @@ export default class ParseObject {
    */
   toPointer(): Pointer {
     if (!this.id) {
-      throw new Error('Cannot create a pointer to an unsaved ParseObject');
+      console.log('sem id na classe', this.className);
+      // throw new Error('Cannot create a pointer to an unsaved ParseObject');
     }
     return {
       __type: 'Pointer',
